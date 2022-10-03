@@ -324,8 +324,36 @@ nav > .nav-links {
   /*#endregion*/
 
   #content {
-    height: 290vh;
+    height: 280vh;
   }
+
+  /**Dropdowns*/
+  /*#region*/
+  .dropdowns {
+    background-color: #000;
+    z-index: 100;
+    height: 90vh;
+  }
+
+  .dropdowns #container {
+    position: absolute;
+    top: 0;
+    height: 100%;
+  }
+
+  .dropdown .header {
+    font-size: 3vmax;
+  }
+
+  .dropdown-content {
+    font-size: 1.8vmax;
+  }
+
+  .dropdown[data-status="active"] .dropdown-content {
+    padding: 5% 0;
+  }
+
+  /*#endregion*/
 
   /**Updates*/
   /*#region*/
