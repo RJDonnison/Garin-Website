@@ -10,10 +10,9 @@
   padding: 0;
   box-sizing: border-box;
   font-family: Roboto;
-  overflow: hidden;
 }
 
-:root{
+:root {
   --side-width: 16vw;
   --logo-hight: 11.4vw;
 }
@@ -21,6 +20,7 @@
 
 /**Nav*/
 /*#region*/
+/*TODO: Clamp text and logo*/
 nav {
   position: absolute;
   top: 0;
@@ -30,6 +30,7 @@ nav {
   display: flex;
   align-items: center;
   overflow: visible;
+  z-index: 100;
 }
 
 nav .logo-container {
@@ -60,7 +61,7 @@ nav a {
   position: relative;
 }
 
-nav  a::after {
+nav a::after {
   content: "";
   position: absolute;
   width: 100%;
@@ -96,9 +97,9 @@ nav > .nav-links {
 /*#endregion*/
 
 /*#region*/
-#content{
+#content {
   position: absolute;
-  bottom: 0;
+  top: 10vh;
   height: 90vh;
   width: 100vw;
   background-position: center;
@@ -130,7 +131,7 @@ nav > .nav-links {
   justify-content: space-around;
 }
 
-.dropdown{
+.dropdown {
   width: 95%;
   cursor: pointer;
   display: flex;
@@ -147,7 +148,7 @@ nav > .nav-links {
   font-size: 1.7vmax;
 }
 
-.dropdown[data-status="active"] .header{
+.dropdown[data-status="active"] .header {
   background-color: #7a0437;
 }
 
@@ -172,7 +173,7 @@ nav > .nav-links {
 
 /*TODO: Make animation smother*/
 
-.dropdown[data-status="active"] .dropdown-content{
+.dropdown[data-status="active"] .dropdown-content {
   padding: 2% 0;
   height: fit-content;
   opacity: 1;
@@ -185,7 +186,7 @@ nav > .nav-links {
     opacity: 0;
     transform: translate(0, -100%);
   }
-  50%{
+  50% {
     transform: translate(0, 0);
   }
   to {
@@ -209,14 +210,13 @@ nav > .nav-links {
   text-align: center;
 }
 
-/*TODO: Clamp font sizes*/
 .updates h1 {
   position: relative;
   left: 50%;
   top: 7%;
   transform: translate(-50%, -50%);
   text-decoration: underline;
-  font-size: 2vmax;
+  font-size: clamp(1.1rem, 2vmax, 3rem);
 }
 
 .update-links {
@@ -230,7 +230,7 @@ nav > .nav-links {
   margin: 0.5vw 0;
   color: #fff;
   width: 30vw;
-  font-size: 1.3vmax;
+  font-size: clamp(0.6rem, 1.3vmax, 1.5rem);
   text-decoration: none;
 }
 
@@ -249,24 +249,23 @@ nav > .nav-links {
   color: #fff;
 }
 
-/*TODO: Clamp font size*/
 .houses p {
-  font-size: 0.75vw;
+  font-size: clamp(0.46rem, 1vmax, 1rem);
   width: 100%;
   padding: 1% 2%;
   text-align: center;
 }
 
 .houses .name {
-  font-size: 1.5vmax;
+  font-size: clamp(0.7rem, 1.5vmax, 2rem);
 }
 
 .houses .points {
-  font-size: 1.25vmax;
+  font-size: clamp(0.65rem, 1.25vmax, 1.1rem);
 }
 
 .houses a {
-  font-size: 1.25vmax;
+  font-size: clamp(0.65rem, 1.25vmax, 1.1rem);
   text-align: center;
   color: #fff;
 }
@@ -278,7 +277,7 @@ nav > .nav-links {
   justify-content: space-around;
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
 }
 
 .houses #Aubert {
@@ -302,3 +301,67 @@ nav > .nav-links {
 }
 /*#endregion*/
 /*#endregion*/
+
+/**600px responsive*/
+@media only screen and (max-width: 600px) {
+  :root {
+    --side-width: 100%;
+  }
+
+  #content {
+    height: 290vh;
+  }
+
+  /**Nav*/
+  /*#region*/
+
+  /*#endregion*/
+
+  /**Updates*/
+  /*#region*/
+  .updates {
+    width: var(--side-width);
+    height: 100vh;
+    border-radius: 0;
+    background-image: url("/images/garin.gif");
+    background-position: center;
+    background-size: cover;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
+  }
+
+  .updates h1 {
+    font-size: clamp(2rem, 6vmax, 3rem);
+  }
+
+  .update-links a {
+    font-size: clamp(0.8rem, 3vmax, 2.5rem);
+    width: fit-content;
+    padding-bottom: 4.5%;
+  }
+  /*#endregion*/
+
+  /**Houses*/
+  /*#region*/
+  .houses {
+    height: 100vh;
+    margin-top: auto;
+  }
+
+  .houses p {
+    font-size: clamp(0.7rem, 1.5vmax, 1.2rem);
+    padding: 0;
+  }
+
+  .houses .name {
+    font-size: clamp(1.5rem, 3vmax, 2.2rem);
+  }
+
+  .houses .points {
+    font-size: clamp(1.2rem, 2vmax, 1.5rem);
+  }
+
+  .houses a {
+    font-size: clamp(1.2rem, 2vmax, 1.5rem);
+  }
+  /*#endregion*/
+}
