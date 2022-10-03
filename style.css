@@ -308,14 +308,24 @@ nav > .nav-links {
     --side-width: 100%;
   }
 
+  /**Nav*/
+  /*#region*/
+  nav .logo-container {
+    display: none;
+  }
+
+  nav > .nav-links {
+    width: 100%;
+  }
+
+  nav .text {
+    font-size: 1.4vmax;
+  }
+  /*#endregion*/
+
   #content {
     height: 290vh;
   }
-
-  /**Nav*/
-  /*#region*/
-
-  /*#endregion*/
 
   /**Updates*/
   /*#region*/
