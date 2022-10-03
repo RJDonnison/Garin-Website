@@ -1,3 +1,4 @@
+//*Total background images
 var totalCount = 4;
 
 function onLoad() {
@@ -12,6 +13,8 @@ function generateBackground() {
   content.style.backgroundImage = "url('images/backgrounds/" + num + ".jpg')";
 }
 
+//*Nav dates
+//#region
 function getDate() {
   const d = new Date();
 
@@ -71,3 +74,9 @@ function getWeek() {
 
   document.getElementById("week").innerHTML = "Week " + Week;
 }
+//#endregion
+
+//*Dropdowns
+//#region
+const dropdowns = document.getElementsByClassName("dropdown");
+//#endregion
