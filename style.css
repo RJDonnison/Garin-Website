@@ -1,0 +1,227 @@
+/**Setup and fonts*/
+/*#region*/
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Roboto;
+  overflow: hidden;
+}
+
+:root{
+  --side-width: 16vw;
+}
+/*#endregion*/
+
+/**Nav*/
+/*#region*/
+nav {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 10vh;
+  background-color: #7a0437;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+nav .logo-container {
+  margin-left: 3.9vw;
+  position: absolute;
+  top: 0;
+  display: flex;
+  justify-content: center;
+}
+
+nav .text {
+  height: 100%;
+  font-size: 1.5vw;
+  text-decoration: none;
+  color: #fff;
+}
+
+.logo-container > img {
+  height: 11.4vw;
+  z-index: 1;
+}
+
+nav a {
+  font-size: 2vw;
+  padding: 1vw 0;
+  text-decoration: none;
+  color: #fff;
+  position: relative;
+}
+
+nav  a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 2px;
+  top: 80%;
+  left: 0;
+  background-color: #f7f7f7;
+  transform: scaleX(0);
+  visibility: hidden;
+  transition: all 0.3s ease-in-out 0s;
+}
+
+nav a:hover::after {
+  transform: scaleX(1);
+  visibility: visible;
+}
+
+nav > .nav-links {
+  position: absolute;
+  right: 0;
+  width: 87%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.line {
+  height: 0.5vh;
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  background-color: #ffd400;
+}
+/*#endregion*/
+
+/*#region*/
+#content{
+  position: absolute;
+  bottom: 0;
+  height: 90vh;
+  width: 100vw;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+}
+
+/**Updates*/
+/*#region*/
+.updates {
+  position: relative;
+  width: 41.4vw;
+  height: 41.4vw;
+  background-color: #000;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  margin: auto;
+}
+
+.updates h1 {
+  position: relative;
+  left: 50%;
+  top: 6vh;
+  transform: translate(-50%, -50%);
+  text-decoration: underline;
+  font-size: 2vw;
+}
+
+.update-links {
+  position: relative;
+  height: 31vw;
+  top: 12vh;
+}
+
+.update-links a {
+  display: inline-block;
+  margin: 0.5vw 0;
+  color: #fff;
+  width: 30vw;
+  font-size: 1.3vw;
+  text-decoration: none;
+}
+
+.update-links a:hover {
+  color: rgb(192, 192, 192);
+}
+/*#endregion*/
+
+/**Houses*/
+/*#region*/
+.houses {
+  position: relative;
+  margin-left: auto;
+  height: 100%;
+  width: var(--side-width);
+  color: #fff;
+}
+
+.houses p {
+  font-size: 0.75vw;
+  width: 100%;
+  padding: 0.25vh 0.5vw;
+  text-align: center;
+}
+
+.houses .name {
+  font-size: 1.5vw;
+}
+
+.houses .points {
+  font-size: 1.25vw;
+}
+
+.houses a {
+  font-size: 1.25vw;
+  text-align: center;
+  color: #fff;
+}
+
+.houses div {
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.houses #Aubert {
+  background-image: url("/images/Aubert.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(61, 72, 105, 0.8);
+}
+
+.houses #Barbier {
+  background-image: url("/images/Barbier.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(44, 132, 83, 0.8);
+}
+
+.houses #McAuley {
+  background-image: url("/images/McAuley.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(184, 15, 10, 0.8);
+}
+
+.houses #MacKillop {
+  background-image: url("/images/MacKillop.jpg");
+  box-shadow: inset 0 0 0 1000px rgba(176, 146, 26, 0.8);
+}
+/*#endregion*/
+
+/**Dropdowns*/
+/*#region*/
+.dropdowns {
+  position: relative;
+  margin-right: auto;
+  height: 150%;
+  width: var(--side-width);
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.8);
+  transition: position 2s;
+}
+
+/*#endregion*/
+/*#endregion*/
