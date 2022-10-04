@@ -78,5 +78,20 @@ function getWeek() {
 
 //*Dropdowns
 //#region
-const dropdowns = document.getElementsByClassName("dropdown");
+const container = document.getElementById("container");
+const dropdowns = Array.from(document.getElementsByClassName("dropdown"));
+dropdowns.forEach((element) => {
+  element.addEventListener("click", () => {
+    dropdowns.forEach((e) => {
+      if (element != e) e.dataset.status = "inactive";
+    });
+    setTimeout(() => {
+      if (element.dataset.status != "active") {
+        element.dataset.status = "active";
+      } else {
+        element.dataset.status = "inactive";
+      }
+    }, 500);
+  });
+});
 //#endregion

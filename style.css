@@ -112,14 +112,14 @@ nav > .nav-links {
 .dropdowns {
   position: absolute;
   top: 0;
-  height: 200%;
+  height: 100%;
   width: var(--side-width);
   text-align: center;
   color: #fff;
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dropdowns .container {
+.dropdowns #container {
   position: relative;
   top: calc(var(--logo-hight) - 10vh);
   width: 100%;
@@ -137,6 +137,7 @@ nav > .nav-links {
   flex-direction: column;
   align-items: center;
   text-align: center;
+  transition: all 800ms ease;
 }
 
 .dropdown .header {
@@ -146,28 +147,51 @@ nav > .nav-links {
   font-size: 1.7vmax;
 }
 
-.dropdown-content a {
-  display: inline-block;
-  padding: 0.2vw;
-}
-
-.dropdown-content {
-  display: none;
-  color: #fff;
-  font-size: 1.2vw;
-  padding: 0.2vw;
-  text-decoration: none;
-  opacity: 0;
+.dropdown[data-status="active"] .header{
+  background-color: #7a0437;
 }
 
 .dropdown:hover .header {
   background-color: #7a0437;
 }
 
+.dropdown-content {
+  position: relative;
+  height: 0;
+  display: block;
+  color: #fff;
+  font-size: 1vw;
+  text-decoration: none;
+  opacity: 0;
+  transition: all 800ms ease;
+}
+
 .dropdown-content:hover {
   background-color: #7a0437;
 }
 
+/*TODO: Make animation smother*/
+
+.dropdown[data-status="active"] .dropdown-content{
+  padding: 2% 0;
+  height: fit-content;
+  opacity: 1;
+  animation: open 800ms forwards;
+  transition: all 800ms ease;
+}
+
+@keyframes open {
+  from {
+    opacity: 0;
+    transform: translate(0, -100%);
+  }
+  50%{
+    transform: translate(0, 0);
+  }
+  to {
+    opacity: 1;
+  }
+}
 /*#endregion*/
 
 /**Updates*/
