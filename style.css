@@ -281,22 +281,22 @@ nav > .nav-links {
 }
 
 .houses #Aubert {
-  background-image: url("https://rjdonnison.github.io/images/aubert.jpg");
+  background-image: url("images/Aubert.jpg");
   box-shadow: inset 0 0 0 1000px rgba(61, 72, 105, 0.8);
 }
 
 .houses #Barbier {
-  background-image: url("https://rjdonnison.github.io/images/Barbier.jpg");
+  background-image: url("images/Barbier.jpg");
   box-shadow: inset 0 0 0 1000px rgba(44, 132, 83, 0.8);
 }
 
 .houses #McAuley {
-  background-image: url("https://rjdonnison.github.io/images/McAuley.jpg");
+  background-image: url("images/McAuley.jpg");
   box-shadow: inset 0 0 0 1000px rgba(184, 15, 10, 0.8);
 }
 
 .houses #MacKillop {
-  background-image: url("https://rjdonnison.github.io/images/MacKillop.jpg");
+  background-image: url("images/MacKillop.jpg");
   box-shadow: inset 0 0 0 1000px rgba(176, 146, 26, 0.8);
 }
 /*#endregion*/
