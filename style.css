@@ -164,7 +164,6 @@ nav > .nav-links {
   font-size: 1vmax;
   text-decoration: none;
   opacity: 0;
-  transition: all 800ms ease;
 }
 
 .dropdown-content:hover {
@@ -178,7 +177,7 @@ nav > .nav-links {
   height: fit-content;
   opacity: 1;
   animation: open 800ms forwards;
-  transition: all 800ms ease;
+  transition: all 800ms ease, background-color 1ms;
 }
 
 @keyframes open {
@@ -318,6 +317,10 @@ nav > .nav-links {
     width: 100%;
   }
 
+  nav a{
+    font-size: 1.8vmax;
+  }
+
   nav .text {
     font-size: 1.4vmax;
   }
@@ -387,7 +390,7 @@ nav > .nav-links {
 
   .houses p {
     font-size: clamp(0.7rem, 1.5vmax, 1.2rem);
-    padding: 0;
+    padding: 0 5%;
   }
 
   .houses .name {
