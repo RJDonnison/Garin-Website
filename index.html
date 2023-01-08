@@ -13,22 +13,29 @@
     <meta name="page-type" content="Homepage" />
     <meta name="audience" content="Students" />
 
+    <!-- *Title and connections to favicon and styles -->
     <title>Garin College Homepage</title>
     <link rel="stylesheet" href="style.css" />
     <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
   </head>
 
+  <!-- *Call js functions onload -->
   <body onload="onLoad()">
+    <!-- *Nav bar -->
     <nav>
+      <!-- *Garin Nav logo -->
       <div class="logo-container">
-        <img src="images/logo.png" alt="" />
+        <img src="images/logo.png" alt="Garin college logo" />
       </div>
 
       <div class="nav-links">
+        <!-- *Date and week -->
         <div class="text">
           <p id="date"></p>
           <p id="week"></p>
         </div>
+
+        <!-- *Nav links -->
         <a href="https://garin.school.kiwi/">KAMAR</a>
         <a href="https://classroom.google.com/a/cloud.garincollege.ac.nz/"
           >Classrooms</a
@@ -43,14 +50,21 @@
         >
       </div>
 
+      <!-- *Nav bar bottom line -->
       <div class="line"></div>
     </nav>
 
+    <!-- *Main content -->
     <main>
+      <!-- *Dropdowns container -->
       <article id="dropdowns">
         <div id="container">
+          <!-- Dropdowns are all the same except for links -->
+          <!-- *Dropdown menu item -->
           <div class="dropdown">
+            <!-- *Dropdown header -->
             <div class="header">Seniors</div>
+            <!-- *Dropdown links -->
             <div>
               <a
                 href="https://secure.nzqa.govt.nz/for-learners/records/login.do"
@@ -319,8 +333,12 @@
         </div>
       </article>
 
+      <!-- *Updates container -->
       <article id="updates">
+        <!-- *Updates header -->
         <h1>Updates</h1>
+        <!-- *Updates links -->
+        <!-- Make sure to have br tags between links -->
         <div class="update-links">
           <a href="">Inspire Conference 30 October @ NCG</a>
           <br />
@@ -339,14 +357,21 @@
         </div>
       </article>
 
+      <!-- *Houses container -->
       <article id="houses">
+        <!-- All houses are the same except for content -->
+        <!-- *House -->
         <div id="Aubert">
+          <!-- *Header -->
           <p class="name">Aubert</p>
+          <!-- *Points -->
           <p class="points">Points</p>
+          <!-- *Information about patreon -->
           <p>
             Suzanne Aubert first came to New Zealand in 1860 and founded a
             religious order, the Daughters of Our Lady of Compassion in 1892.
           </p>
+          <!-- *Instagram link -->
           <a href="">Instagram</a>
         </div>
         <div id="Barbier">
@@ -375,4 +400,5 @@
   </body>
 </html>
 
+<!-- *JS link -->
 <script src="app.js"></script>
