@@ -1,6 +1,6 @@
 import os
 
-folderPath = r'../backgrounds/'
+folderPath =  f'{os.getcwd()}/images/backgrounds/'
 
 fileSequence = 1
 
