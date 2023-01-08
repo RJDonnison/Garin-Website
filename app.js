@@ -78,20 +78,17 @@ function getWeek() {
 
 //*Dropdowns
 //#region
-const container = document.getElementById("container");
-const dropdowns = Array.from(document.getElementsByClassName("dropdown"));
+const dropdowns = Array.from(document.querySelectorAll(".dropdown .header"));
 dropdowns.forEach((element) => {
   element.addEventListener("click", () => {
     dropdowns.forEach((e) => {
-      if (element != e) e.dataset.status = "inactive";
+      if (element != e) e.parentElement.dataset.status = "inactive";
     });
-    setTimeout(() => {
-      if (element.dataset.status != "active") {
-        element.dataset.status = "active";
-      } else {
-        element.dataset.status = "inactive";
-      }
-    }, 500);
+    if (element.parentElement.dataset.status != "active") {
+      element.parentElement.dataset.status = "active";
+    } else {
+      element.parentElement.dataset.status = "inactive";
+    }
   });
 });
 //#endregion

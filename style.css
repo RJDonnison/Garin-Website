@@ -146,6 +146,7 @@ nav > .nav-links {
   text-decoration: none;
   width: 100%;
   font-size: 1.7vmax;
+  padding-bottom: 1%;
 }
 
 .dropdown[data-status="active"] .header {
@@ -164,6 +165,7 @@ nav > .nav-links {
   font-size: 1vmax;
   text-decoration: none;
   opacity: 0;
+  pointer-events: none;
 }
 
 .dropdown-content:hover {
@@ -176,6 +178,7 @@ nav > .nav-links {
   padding: 2% 0;
   height: fit-content;
   opacity: 1;
+  pointer-events: all;
   animation: open 800ms forwards;
   transition: all 800ms ease, background-color 1ms;
 }
@@ -183,10 +186,6 @@ nav > .nav-links {
 @keyframes open {
   from {
     opacity: 0;
-    transform: translate(0, -100%);
-  }
-  50% {
-    transform: translate(0, 0);
   }
   to {
     opacity: 1;
@@ -317,7 +316,7 @@ nav > .nav-links {
     width: 100%;
   }
 
-  nav a{
+  nav a {
     font-size: 1.8vmax;
   }
 
