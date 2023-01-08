@@ -1,231 +1,369 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Garin College Homepage</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Garin College Homepage</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="shortcut icon" href="images/favicon.png" type="image/x-icon" />
-</head>
+  <body onload="onLoad()">
+    <nav>
+      <div class="logo-container">
+        <img src="images/logo.png" alt="" />
+      </div>
 
-<body onload="onLoad()">
-  <nav>
-    <div class="logo-container">
-      <img src="images/logo.png" alt="" />
+      <div class="nav-links">
+        <div class="text">
+          <p id="date"></p>
+          <p id="week"></p>
+        </div>
+        <a href="https://garin.school.kiwi/">KAMAR</a>
+        <a href="https://classroom.google.com/a/cloud.garincollege.ac.nz/"
+          >Classrooms</a
+        >
+        <a
+          href="http://www.google.com/calendar/embed?src=cloud.garincollege.ac.nz_hidqfig2fmrpit5voch3jpdr0c%40group.calendar.google.com&ctz=Pacific/Auckland"
+          >Calender</a
+        >
+        <a
+          href="http://10.250.80.17/WebPrint/Account/LogOn?ReturnUrl=%2fWebPrint"
+          >Printing</a
+        >
+      </div>
+
+      <div class="line"></div>
+    </nav>
+
+    <div id="content">
+      <div class="dropdowns">
+        <div id="container">
+          <div class="dropdown">
+            <div class="header">Seniors</div>
+            <div>
+              <a
+                href="https://secure.nzqa.govt.nz/for-learners/records/login.do"
+                class="dropdown-content"
+                >NZQA learner Login</a
+              >
+              <a
+                href="https://docs.google.com/document/d/10SuadWs82a8Um6k5VOdru4dXhGkIgGOHl_Hp3nPS6Wk/edit?usp=sharing"
+                class="dropdown-content"
+                >Catch Up Form</a
+              >
+              <a
+                href="https://docs.google.com/document/d/16sK9DtUuqPoZ0RHbaL7lZfDXNHDM4rlzIkFDsOBcbrk/edit?usp=sharing"
+                class="dropdown-content"
+                >Independent Study</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1vZQor20ha7pOrwnMMs4kOvq4sO8r9OmPvT-NyaaGM3M/edit?usp=sharing"
+                class="dropdown-content"
+                >L1 Credit Watch</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1HJkDFegkRINGfSb7zFJwgcyZOtostK02AdcuH23q3Gw/edit?ts=5c744eca#gid=16"
+                class="dropdown-content"
+                >L2 Credit Watch</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1BM-1N8i9UjHIJBUPJokl7_8dTzdw_EwTG79BAMGA05o/edit?usp=sharing"
+                class="dropdown-content"
+                >L3 Credit Watch</a
+              >
+              <a
+                href="https://docs.google.com/a/cloud.garincollege.ac.nz/forms/d/e/1FAIpQLSf6EExHejK2D7hyIaXnV0DFe-g10H-bqBmMNzW6nIXNiToDYg/viewform"
+                class="dropdown-content"
+                >Testimonial Application</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Juniors</div>
+            <div>
+              <a
+                href="https://e-asttle.education.govt.nz/StudentWeb/login.faces"
+                class="dropdown-content"
+                >e-asTTle Login</a
+              >
+              <a
+                href="https://docs.google.com/document/d/1vyWLwjYFJbMY9ZHqT_SlgQcEWEQNPVZGfvQRfikDJEY/edit?ts=5c4a305b"
+                class="dropdown-content"
+                >New Student Booklet</a
+              >
+              <a
+                href="https://docs.google.com/presentation/d/1FV6KNHLxcWSu9UZ9Q8ijCRXTsNSejuWW18uB3F2gM6I/edit?usp=sharing"
+                class="dropdown-content"
+                >Setting up KAMAR</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Staff</div>
+            <div>
+              <a
+                href="https://sites.google.com/a/cloud.garincollege.ac.nz/garinstaff/"
+                class="dropdown-content"
+                >E-Staffroom</a
+              >
+              <a
+                href="https://goo.gl/forms/nmQByWxDILs75Iwh2"
+                class="dropdown-content"
+                >Testimonial Term 4</a
+              >
+              <a
+                href="https://sites.google.com/a/cloud.garincollege.ac.nz/gcpastoral/"
+                class="dropdown-content"
+                >Student Well-being</a
+              >
+              <a
+                href="https://idp.garincollege.ac.nz/saml2/idp/SSOService.php?spentityid=https://idp.ourschool.co.nz/module.php/saml/sp/metadata.php/ourschool-fed&RelayState=https://idp.ourschool.co.nz/saml2/idp/SSOService.php?spentityid=https://www.etv.org.nz/saml/module.php/saml/sp/metadata.php/ourschool-sp&RelayState=https://www.etv.org.nz/newsso.php?id=ourschool-sp"
+                class="dropdown-content"
+                >eTV</a
+              >
+              <a
+                href="https://careercentral.school.nz/"
+                class="dropdown-content"
+                >Career Central</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Information</div>
+            <div>
+              <a
+                href="https://docs.google.com/document/d/160c1K_-eEEnjYASIG_kRpYdRZESZXEXK_StnGaRIwCE/edit?usp=sharing_eil_dm&ts=618897ef"
+                class="dropdown-content"
+                >Leaders 2022</a
+              >
+              <a
+                href="https://www.instagram.com/jamatgarin/"
+                class="dropdown-content"
+                >Justice and ministry</a
+              >
+              <a
+                href="https://drive.google.com/a/cloud.garincollege.ac.nz/file/d/0B8pUvdSr3IJbOVRWdUlRXzNjUWs/view?usp=sharing"
+                class="dropdown-content"
+                >Garin College site map</a
+              >
+              <a href="" class="dropdown-content">Whanau classes</a>
+              <a
+                href="https://drive.google.com/file/d/0B8pUvdSr3IJbSXhDLVlhb3VQbzVJdlBaOVcyRmJ0MENrYVdR/view?usp=sharing"
+                class="dropdown-content"
+                >Canteen-winter menu</a
+              >
+              <a
+                href="https://intranet.garincollege.ac.nz/Resources/tuckshopsMenu.pdf"
+                class="dropdown-content"
+                >Champion menu</a
+              >
+              <a
+                href="https://intranet.garincollege.ac.nz/Resources/txtMyLunch.pdf"
+                class="dropdown-content"
+                >TxT my lunch</a
+              >
+              <a
+                href="https://docs.google.com/a/cloud.garincollege.ac.nz/document/d/1KF1iZxWC10qDYeSc6-mnsElWc54U-iIjJZCA1nuuFEQ/edit"
+                class="dropdown-content"
+                >Short network contract</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Pastoral Support</div>
+            <div>
+              <a
+                href="https://docs.google.com/presentation/d/12hilcHUoCmNpH5Ekm1SCed_ULOJ2C-9cBY1N4HmP_gI/edit?usp=sharing"
+                class="dropdown-content"
+                >Heath and Well-being</a
+              >
+              <a
+                href="https://drive.google.com/file/d/1dd4AeJhLHAEV0jQdmNa2xryy2a877gps/view?usp=sharing"
+                class="dropdown-content"
+                >Poster</a
+              >
+              <a
+                href="https://sites.google.com/a/cloud.garincollege.ac.nz/garin-college-tech-help/"
+                class="dropdown-content"
+                >BYOD Help</a
+              >
+              <a
+                href="https://docs.google.com/a/cloud.garincollege.ac.nz/document/d/10wxuvBEtweZIFInnEpucIgD19mVKrvTJ-XEfZhEssWA/edit?usp=sharing"
+                class="dropdown-content"
+                >BYOD New Users</a
+              >
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSdybsJ5zPkJNfT_mz4ki8ido5OXnOasbRNpIsXNUpMGNl8I8A/viewform?usp=sf_link"
+                class="dropdown-content"
+                >Counselor referral from</a
+              >
+              <a
+                href="https://docs.google.com/forms/d/e/1FAIpQLSe3tW4XLnMiUdGDwgzIUMW0p55_c2O-j0jlF--BfxsXe_AEgw/viewform?usp=sf_link"
+                class="dropdown-content"
+                >Peertutoring Sign up</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Pathway Planning</div>
+            <div>
+              <a
+                href="https://garincollege.careerwise.school/"
+                class="dropdown-content"
+                >CareerWise</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Research Links</div>
+            <div>
+              <a href="http://wikieducator.org/" class="dropdown-content"
+                >Wiki Educator</a
+              >
+              <a href="http://epic.crystal.school.nz/" class="dropdown-content"
+                >Epic database</a
+              >
+              <a
+                href="https://sites.google.com/cloud.garincollege.ac.nz/student-dr4re/home"
+                class="dropdown-content"
+                >Digital Resources 4 RE</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Special Character</div>
+            <div>
+              <a
+                href="https://drive.google.com/file/d/0B8pUvdSr3IJbRUNGUnBBWkZ5VnM/view?usp=sharing"
+                class="dropdown-content"
+                >School Prayer</a
+              >
+              <a
+                href="https://docs.google.com/document/d/1YF2Zw658wALFLTWsy4t6nXc7e-yNkE4dT6H-YjVXyLc/edit?usp=sharing"
+                class="dropdown-content"
+                >Teaching principles</a
+              >
+              <a
+                href="https://docs.google.com/document/d/1eJAZLxqoM5YpZjCYXccKGnI0qVcDhwmfMbtKErP4-IE/edit?usp=sharing"
+                class="dropdown-content"
+                >Garin college graduates</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">Performing arts</div>
+            <div>
+              <a
+                href="https://intranet.garincollege.ac.nz/lessonic/index.html"
+                class="dropdown-content"
+                >Lessonic</a
+              >
+              <a
+                href="https://docs.google.com/a/cloud.garincollege.ac.nz/forms/d/1FwhEASYhttps://docs.google.com/a/cloud.garincollege.ac.nz/spreadsheets/d/1PTc2vyUgk2f_nd3rtI4hg39qUihMi69hHJ5sTksUgAY/edit?usp=sharingocs.google.com/forms/d/1gjUTJyrcgbX9giHf0jjfmucDLViIhzBeVyPsCWgSE2g/formrestricted?edit_requested=true"
+                class="dropdown-content"
+                >Music lessons TT</a
+              >
+              <a
+                href="https://docs.google.com/a/cloud.garincollege.ac.nz/forms/d/1WD2kXSY_IEL9FgzBoODf-GYdSWtl9QrXsSj_PuicJRY/viewform?usp=send_form"
+                class="dropdown-content"
+                >Lunchtime Concerts</a
+              >
+              <a
+                href="https://docs.google.com/a/cloud.garincollege.ac.nz/document/d/1qsC8HUpD_pZzz7uZLNLtIYDGs_P4PORjFxKTIvzXe0Y/edit?usp=sharing"
+                class="dropdown-content"
+                >Studio use contract</a
+              >
+              <a
+                href="https://docs.google.com/spreadsheets/d/1Pg4zhQYj4ryooQesoG_WHJbAp30spJBARzVtSsiIZ90/edit#gid=1277308413"
+                class="dropdown-content"
+                >Studio Bookings</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <div class="header">PE</div>
+            <div>
+              <a
+                href="https://www.facebook.com/Garin-College-Sport-204019869630124/"
+                class="dropdown-content"
+                >Facebook</a
+              >
+              <a
+                href="https://drive.google.com/folderview?id=0B5Dyyt6YZnvNT3I1WFk5YW5TZGs&usp=sharing"
+                class="dropdown-content"
+                >P.E. timetable</a
+              >
+            </div>
+          </div>
+          <div class="dropdown">
+            <a class="header" href="https://intranet.garincollege.ac.nz:8443/"
+              >Library System</a
+            >
+          </div>
+          <div class="dropdown">
+            <a class="header" href="https://www.mathsbuddy.co.nz/"
+              >MathsBuddy</a
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="updates">
+        <h1>Updates</h1>
+        <div class="update-links">
+          <a href="">Inspire Conference 30 October @ NCG</a>
+          <br />
+          <a href="">Intermediate quiz 3rd November Brightwater Hall</a>
+          <br />
+          <a href="">Help evaluate Garin's new music website</a>
+          <br />
+          <a href="">Student BOT rep nomination</a>
+          <br />
+          <a href="">Leadership applications 2022</a>
+          <br />
+          <a href="">House Captains 2022 applications</a>
+          <br />
+          <a href="">Tasman Secondary School Events sign-up</a>
+          <br />
+        </div>
+      </div>
+
+      <div class="houses">
+        <div id="Aubert">
+          <p class="name">Aubert</p>
+          <p class="points">Points</p>
+          <p>
+            Suzanne Aubert first came to New Zealand in 1860 and founded a
+            religious order, the Daughters of Our Lady of Compassion in 1892.
+          </p>
+          <a href="">Instagram</a>
+        </div>
+        <div id="Barbier">
+          <p class="name">Barbier</p>
+          <p class="points">Points</p>
+          <p>
+            Adèle Euphrasie Barbier was the founder of Congregation of Our Lady
+            of the Missions.
+          </p>
+          <a href="">Instagram</a>
+        </div>
+        <div id="McAuley">
+          <p class="name">McAuley</p>
+          <p class="points">Points</p>
+          <p>Catherine McAuley founded the Sisters of Mercy in 1831.</p>
+          <a href="">Instagram</a>
+        </div>
+        <div id="MacKillop">
+          <p class="name">MacKillop</p>
+          <p class="points">Points</p>
+          <p>Mary MacKillop founded the Sisters of St Joseph in 1866.</p>
+          <a href="">Instagram</a>
+        </div>
+      </div>
     </div>
-
-    <div class="nav-links">
-      <div class="text">
-        <p id="date"></p>
-        <p id="week"></p>
-      </div>
-      <a href="https://garin.school.kiwi/">KAMAR</a>
-      <a href="https://classroom.google.com/a/cloud.garincollege.ac.nz/">Classrooms</a>
-      <a
-        href="http://www.google.com/calendar/embed?src=cloud.garincollege.ac.nz_hidqfig2fmrpit5voch3jpdr0c%40group.calendar.google.com&ctz=Pacific/Auckland">Calender</a>
-      <a href="http://10.250.80.17/WebPrint/Account/LogOn?ReturnUrl=%2fWebPrint">Printing</a>
-    </div>
-
-    <div class="line"></div>
-  </nav>
-
-  <div id="content">
-    <div class="dropdowns">
-      <div id="container">
-        <div class="dropdown">
-          <div class="header">Seniors</div>
-          <div>
-            <a href="https://secure.nzqa.govt.nz/for-learners/records/login.do" class="dropdown-content">NZQA learner
-              Login</a>
-            <a href="https://docs.google.com/document/d/10SuadWs82a8Um6k5VOdru4dXhGkIgGOHl_Hp3nPS6Wk/edit?usp=sharing"
-              class="dropdown-content">Catch Up Form</a>
-            <a href="https://docs.google.com/document/d/16sK9DtUuqPoZ0RHbaL7lZfDXNHDM4rlzIkFDsOBcbrk/edit?usp=sharing"
-              class="dropdown-content">Independent Study</a>
-            <a href="https://docs.google.com/spreadsheets/d/1vZQor20ha7pOrwnMMs4kOvq4sO8r9OmPvT-NyaaGM3M/edit?usp=sharing"
-              class="dropdown-content">L1 Credit Watch</a>
-            <a href="https://docs.google.com/spreadsheets/d/1HJkDFegkRINGfSb7zFJwgcyZOtostK02AdcuH23q3Gw/edit?ts=5c744eca#gid=16"
-              class="dropdown-content">L2 Credit Watch</a>
-            <a href="https://docs.google.com/spreadsheets/d/1BM-1N8i9UjHIJBUPJokl7_8dTzdw_EwTG79BAMGA05o/edit?usp=sharing"
-              class="dropdown-content">L3 Credit Watch</a>
-            <a href="https://docs.google.com/a/cloud.garincollege.ac.nz/forms/d/e/1FAIpQLSf6EExHejK2D7hyIaXnV0DFe-g10H-bqBmMNzW6nIXNiToDYg/viewform"
-              class="dropdown-content">Testimonial Application</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Juniors</div>
-          <div>
-            <a href="https://e-asttle.education.govt.nz/StudentWeb/login.faces" class="dropdown-content">e-asTTle
-              Login</a>
-            <a href="https://docs.google.com/document/d/1vyWLwjYFJbMY9ZHqT_SlgQcEWEQNPVZGfvQRfikDJEY/edit?ts=5c4a305b"
-              class="dropdown-content">New Student Booklet</a>
-            <a href="https://docs.google.com/presentation/d/1FV6KNHLxcWSu9UZ9Q8ijCRXTsNSejuWW18uB3F2gM6I/edit?usp=sharing"
-              class="dropdown-content">Setting up KAMAR</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Staff</div>
-          <div>
-            <a href="https://sites.google.com/a/cloud.garincollege.ac.nz/garinstaff/"
-              class="dropdown-content">E-Staffroom</a>
-            <a href="https://goo.gl/forms/nmQByWxDILs75Iwh2" class="dropdown-content">Testimonial Term 4</a>
-            <a href="https://sites.google.com/a/cloud.garincollege.ac.nz/gcpastoral/" class="dropdown-content">Student
-              Well-being</a>
-            <a href="https://idp.garincollege.ac.nz/saml2/idp/SSOService.php?spentityid=https://idp.ourschool.co.nz/module.php/saml/sp/metadata.php/ourschool-fed&RelayState=https://idp.ourschool.co.nz/saml2/idp/SSOService.php?spentityid=https://www.etv.org.nz/saml/module.php/saml/sp/metadata.php/ourschool-sp&RelayState=https://www.etv.org.nz/newsso.php?id=ourschool-sp"
-              class="dropdown-content">eTV</a>
-            <a href="https://careercentral.school.nz/" class="dropdown-content">Career Central</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Information</div>
-          <div>
-            <a href="https://docs.google.com/document/d/160c1K_-eEEnjYASIG_kRpYdRZESZXEXK_StnGaRIwCE/edit?usp=sharing_eil_dm&ts=618897ef"
-              class="dropdown-content">Leaders 2022</a>
-            <a href="https://www.instagram.com/jamatgarin/" class="dropdown-content">Justice and ministry</a>
-            <a href="https://drive.google.com/a/cloud.garincollege.ac.nz/file/d/0B8pUvdSr3IJbOVRWdUlRXzNjUWs/view?usp=sharing"
-              class="dropdown-content">Garin College site map</a>
-            <a href="" class="dropdown-content">Whanau classes</a>
-            <a href="https://drive.google.com/file/d/0B8pUvdSr3IJbSXhDLVlhb3VQbzVJdlBaOVcyRmJ0MENrYVdR/view?usp=sharing"
-              class="dropdown-content">Canteen-winter menu</a>
-            <a href="https://intranet.garincollege.ac.nz/Resources/tuckshopsMenu.pdf" class="dropdown-content">Champion
-              menu</a>
-            <a href="https://intranet.garincollege.ac.nz/Resources/txtMyLunch.pdf" class="dropdown-content">TxT my
-              lunch</a>
-            <a href="https://docs.google.com/a/cloud.garincollege.ac.nz/document/d/1KF1iZxWC10qDYeSc6-mnsElWc54U-iIjJZCA1nuuFEQ/edit"
-              class="dropdown-content">Short network contract</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Pastoral Support</div>
-          <div>
-            <a href="https://docs.google.com/presentation/d/12hilcHUoCmNpH5Ekm1SCed_ULOJ2C-9cBY1N4HmP_gI/edit?usp=sharing"
-              class="dropdown-content">Heath and Well-being</a>
-            <a href="https://drive.google.com/file/d/1dd4AeJhLHAEV0jQdmNa2xryy2a877gps/view?usp=sharing"
-              class="dropdown-content">Poster</a>
-            <a href="https://sites.google.com/a/cloud.garincollege.ac.nz/garin-college-tech-help/"
-              class="dropdown-content">BYOD Help</a>
-            <a href="https://docs.google.com/a/cloud.garincollege.ac.nz/document/d/10wxuvBEtweZIFInnEpucIgD19mVKrvTJ-XEfZhEssWA/edit?usp=sharing"
-              class="dropdown-content">BYOD New Users</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSdybsJ5zPkJNfT_mz4ki8ido5OXnOasbRNpIsXNUpMGNl8I8A/viewform?usp=sf_link"
-              class="dropdown-content">Counselor referral from</a>
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSe3tW4XLnMiUdGDwgzIUMW0p55_c2O-j0jlF--BfxsXe_AEgw/viewform?usp=sf_link"
-              class="dropdown-content">Peertutoring Sign up</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Pathway Planning</div>
-          <div>
-            <a href="https://garincollege.careerwise.school/" class="dropdown-content">CareerWise</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Research Links</div>
-          <div>
-            <a href="http://wikieducator.org/" class="dropdown-content">Wiki Educator</a>
-            <a href="http://epic.crystal.school.nz/" class="dropdown-content">Epic database</a>
-            <a href="https://sites.google.com/cloud.garincollege.ac.nz/student-dr4re/home"
-              class="dropdown-content">Digital Resources 4 RE</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Special Character</div>
-          <div>
-            <a href="https://drive.google.com/file/d/0B8pUvdSr3IJbRUNGUnBBWkZ5VnM/view?usp=sharing"
-              class="dropdown-content">School Prayer</a>
-            <a href="https://docs.google.com/document/d/1YF2Zw658wALFLTWsy4t6nXc7e-yNkE4dT6H-YjVXyLc/edit?usp=sharing"
-              class="dropdown-content">Teaching principles</a>
-            <a href="https://docs.google.com/document/d/1eJAZLxqoM5YpZjCYXccKGnI0qVcDhwmfMbtKErP4-IE/edit?usp=sharing"
-              class="dropdown-content">Garin college graduates</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">Performing arts</div>
-          <div>
-            <a href="https://intranet.garincollege.ac.nz/lessonic/index.html" class="dropdown-content">Lessonic</a>
-            <a href="https://docs.google.com/a/cloud.garincollege.ac.nz/forms/d/1FwhEASYhttps://docs.google.com/a/cloud.garincollege.ac.nz/spreadsheets/d/1PTc2vyUgk2f_nd3rtI4hg39qUihMi69hHJ5sTksUgAY/edit?usp=sharingocs.google.com/forms/d/1gjUTJyrcgbX9giHf0jjfmucDLViIhzBeVyPsCWgSE2g/formrestricted?edit_requested=true"
-              class="dropdown-content">Music lessons TT</a>
-            <a href="https://docs.google.com/a/cloud.garincollege.ac.nz/forms/d/1WD2kXSY_IEL9FgzBoODf-GYdSWtl9QrXsSj_PuicJRY/viewform?usp=send_form"
-              class="dropdown-content">Lunchtime Concerts</a>
-            <a href="https://docs.google.com/a/cloud.garincollege.ac.nz/document/d/1qsC8HUpD_pZzz7uZLNLtIYDGs_P4PORjFxKTIvzXe0Y/edit?usp=sharing"
-              class="dropdown-content">Studio use contract</a>
-            <a href="https://docs.google.com/spreadsheets/d/1Pg4zhQYj4ryooQesoG_WHJbAp30spJBARzVtSsiIZ90/edit#gid=1277308413"
-              class="dropdown-content">Studio Bookings</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <div class="header">PE</div>
-          <div>
-            <a href="https://www.facebook.com/Garin-College-Sport-204019869630124/"
-              class="dropdown-content">Facebook</a>
-            <a href="https://drive.google.com/folderview?id=0B5Dyyt6YZnvNT3I1WFk5YW5TZGs&usp=sharing"
-              class="dropdown-content">P.E. timetable</a>
-          </div>
-        </div>
-        <div class="dropdown">
-          <a class="header" href="https://intranet.garincollege.ac.nz:8443/">Library System</a>
-        </div>
-        <div class="dropdown">
-          <a class="header" href="https://www.mathsbuddy.co.nz/">MathsBuddy</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="updates">
-      <h1>Updates</h1>
-      <div class="update-links">
-        <a href="">Inspire Conference 30 October @ NCG</a>
-        <br />
-        <a href="">Intermediate quiz 3rd November Brightwater Hall</a>
-        <br />
-        <a href="">Help evaluate Garin's new music website</a>
-        <br />
-        <a href="">Student BOT rep nomination</a>
-        <br />
-        <a href="">Leadership applications 2022</a>
-        <br />
-        <a href="">House Captains 2022 applications</a>
-        <br />
-        <a href="">Tasman Secondary School Events sign-up</a>
-        <br />
-      </div>
-    </div>
-
-    <div class="houses">
-      <div id="Aubert">
-        <p class="name">Aubert</p>
-        <p class="points">Points</p>
-        <p>
-          Suzanne Aubert first came to New Zealand in 1860 and founded a
-          religious order, the Daughters of Our Lady of Compassion in 1892.
-        </p>
-        <a href="">Facebook Link</a>
-      </div>
-      <div id="Barbier">
-        <p class="name">Barbier</p>
-        <p class="points">Points</p>
-        <p>
-          Adèle Euphrasie Barbier was the founder of Congregation of Our Lady
-          of the Missions.
-        </p>
-        <a href="">Facebook Link</a>
-      </div>
-      <div id="McAuley">
-        <p class="name">McAuley</p>
-        <p class="points">Points</p>
-        <p>Catherine McAuley founded the Sisters of Mercy in 1831.</p>
-        <a href="">Facebook Link</a>
-      </div>
-      <div id="MacKillop">
-        <p class="name">MacKillop</p>
-        <p class="points">Points</p>
-        <p>Mary MacKillop founded the Sisters of St Joseph in 1866.</p>
-        <a href="">Facebook Link</a>
-      </div>
-    </div>
-  </div>
-</body>
-
+  </body>
 </html>
 
 <script src="app.js"></script>
