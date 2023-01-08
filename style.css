@@ -6,6 +6,9 @@
 }
 
 /**Setting up stationary page*/
+body {
+  overflow: hidden;
+}
 
 * {
   margin: 0;
@@ -318,6 +321,11 @@ main {
 
 /**600px responsive*/
 @media only screen and (max-width: 600px) {
+  /**Remove stationary page*/
+  body {
+    overflow: auto;
+  }
+
   /**Variables*/
   :root {
     --side-width: 100%;
