@@ -5,6 +5,8 @@
   src: url(fonts/Roboto-Regular.ttf);
 }
 
+/**Setting up stationary page*/
+
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +14,7 @@
   font-family: Roboto;
 }
 
+/**Variables*/
 :root {
   --side-width: 16vw;
   --logo-hight: 11.4vw;
@@ -33,6 +36,7 @@ nav {
   z-index: 100;
 }
 
+/**Nav logo pos*/
 nav .logo-container {
   margin-left: 3.9vw;
   position: absolute;
@@ -41,6 +45,13 @@ nav .logo-container {
   justify-content: center;
 }
 
+/**Nav logo size*/
+.logo-container > img {
+  height: var(--logo-hight);
+  z-index: 1;
+}
+
+/**Nav dates*/
 nav .text {
   height: 100%;
   font-size: 1.5vw;
@@ -48,11 +59,7 @@ nav .text {
   color: #fff;
 }
 
-.logo-container > img {
-  height: var(--logo-hight);
-  z-index: 1;
-}
-
+/**Nav links*/
 nav a {
   font-size: 2vmax;
   padding: 1vw 0;
@@ -61,6 +68,7 @@ nav a {
   position: relative;
 }
 
+/**Nav links underline*/
 nav a::after {
   content: "";
   position: absolute;
@@ -74,11 +82,13 @@ nav a::after {
   transition: all 0.3s ease-in-out 0s;
 }
 
+/**Nav links underline activation*/
 nav a:hover::after {
   transform: scaleX(1);
   visibility: visible;
 }
 
+/**Nav links positioning*/
 nav > .nav-links {
   position: absolute;
   right: 0;
@@ -87,6 +97,7 @@ nav > .nav-links {
   justify-content: space-around;
 }
 
+/**Nav bottom line*/
 .line {
   height: 0.5vh;
   width: 100%;
@@ -97,7 +108,8 @@ nav > .nav-links {
 /*#endregion*/
 
 /*#region*/
-#content {
+/**Content*/
+main {
   position: absolute;
   top: 10vh;
   height: 90vh;
@@ -110,7 +122,8 @@ nav > .nav-links {
 
 /**Dropdowns*/
 /*#region*/
-.dropdowns {
+/**Dropdown positioning, size and background*/
+#dropdowns {
   position: absolute;
   top: 0;
   height: 100%;
@@ -120,7 +133,7 @@ nav > .nav-links {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
-.dropdowns #container {
+#dropdowns #container {
   position: relative;
   top: calc(var(--logo-hight) - 10vh);
   width: 100%;
@@ -131,6 +144,7 @@ nav > .nav-links {
   justify-content: space-around;
 }
 
+/**Dropdown menu item*/
 .dropdown {
   width: 95%;
   cursor: pointer;
@@ -141,6 +155,7 @@ nav > .nav-links {
   transition: all 800ms ease;
 }
 
+/**Dropdown header*/
 .dropdown .header {
   color: #fff;
   text-decoration: none;
@@ -157,6 +172,7 @@ nav > .nav-links {
   background-color: #7a0437;
 }
 
+/**Inactive dropdown content positioning and hiding*/
 .dropdown-content {
   position: relative;
   height: 0;
@@ -172,30 +188,20 @@ nav > .nav-links {
   background-color: #7a0437;
 }
 
-/*TODO: Make animation smother*/
-
+/**Active dropdown content positioning and sizing*/
 .dropdown[data-status="active"] .dropdown-content {
   padding: 2% 0;
   height: fit-content;
   opacity: 1;
   pointer-events: all;
-  animation: open 800ms forwards;
   transition: all 800ms ease, background-color 1ms;
-}
-
-@keyframes open {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
 }
 /*#endregion*/
 
 /**Updates*/
 /*#region*/
-.updates {
+/**Updates container positioning, background and sizing*/
+#updates {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -208,7 +214,8 @@ nav > .nav-links {
   text-align: center;
 }
 
-.updates h1 {
+/**Updates header*/
+#updates h1 {
   position: relative;
   left: 50%;
   top: 7%;
@@ -217,12 +224,14 @@ nav > .nav-links {
   font-size: clamp(1.1rem, 2vmax, 3rem);
 }
 
+/**Update links container positing and sizing*/
 .update-links {
   position: relative;
   height: 31vw;
   top: 9%;
 }
 
+/**Update links coloring and sizing*/
 .update-links a {
   display: inline-block;
   margin: 0.5vw 0;
@@ -239,7 +248,8 @@ nav > .nav-links {
 
 /**Houses*/
 /*#region*/
-.houses {
+/**Houses container positioning and sizing*/
+#houses {
   position: relative;
   margin-left: auto;
   height: 100%;
@@ -247,28 +257,33 @@ nav > .nav-links {
   color: #fff;
 }
 
-.houses p {
+/**Houses text sizing*/
+#houses p {
   font-size: clamp(0.46rem, 1vmax, 1rem);
   width: 100%;
   padding: 1% 2%;
   text-align: center;
 }
 
-.houses .name {
+/**Houses header sizing*/
+#houses .name {
   font-size: clamp(0.7rem, 1.5vmax, 2rem);
 }
 
-.houses .points {
+/**Houses points sizing*/
+#houses .points {
   font-size: clamp(0.65rem, 1.25vmax, 1.1rem);
 }
 
-.houses a {
+/**Houses instagram link sizing*/
+#houses a {
   font-size: clamp(0.65rem, 1.25vmax, 1.1rem);
   text-align: center;
   color: #fff;
 }
 
-.houses div {
+/**Houses sections*/
+#houses div {
   height: 25%;
   display: flex;
   flex-direction: column;
@@ -278,22 +293,23 @@ nav > .nav-links {
   background-position: center;
 }
 
-.houses #Aubert {
+/**Houses background*/
+#houses #Aubert {
   background-image: url("images/Aubert.jpg");
   box-shadow: inset 0 0 0 1000px rgba(61, 72, 105, 0.8);
 }
 
-.houses #Barbier {
+#houses #Barbier {
   background-image: url("images/Barbier.jpg");
   box-shadow: inset 0 0 0 1000px rgba(44, 132, 83, 0.8);
 }
 
-.houses #McAuley {
+#houses #McAuley {
   background-image: url("images/McAuley.jpg");
   box-shadow: inset 0 0 0 1000px rgba(184, 15, 10, 0.8);
 }
 
-.houses #MacKillop {
+#houses #MacKillop {
   background-image: url("images/MacKillop.jpg");
   box-shadow: inset 0 0 0 1000px rgba(176, 146, 26, 0.8);
 }
@@ -302,20 +318,24 @@ nav > .nav-links {
 
 /**600px responsive*/
 @media only screen and (max-width: 600px) {
+  /**Variables*/
   :root {
     --side-width: 100%;
   }
 
   /**Nav*/
   /*#region*/
+  /**Remove logo*/
   nav .logo-container {
     display: none;
   }
 
+  /**Expand nav links space*/
   nav > .nav-links {
     width: 100%;
   }
 
+  /**Change nav links sizing*/
   nav a {
     font-size: 1.8vmax;
   }
@@ -325,24 +345,27 @@ nav > .nav-links {
   }
   /*#endregion*/
 
-  #content {
+  /**Main content size*/
+  main {
     height: 280vh;
   }
 
   /**Dropdowns*/
   /*#region*/
-  .dropdowns {
+  /**Full size dropdowns article*/
+  #dropdowns {
     background-color: #000;
     z-index: 100;
     height: 90vh;
   }
 
-  .dropdowns #container {
+  #dropdowns #container {
     position: absolute;
     top: 0;
     height: 100%;
   }
 
+  /**Change dropdown text sizing*/
   .dropdown .header {
     font-size: 3vmax;
   }
@@ -359,7 +382,8 @@ nav > .nav-links {
 
   /**Updates*/
   /*#region*/
-  .updates {
+  /**Full size updates article*/
+  #updates {
     width: var(--side-width);
     height: 100vh;
     border-radius: 0;
@@ -369,7 +393,8 @@ nav > .nav-links {
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
   }
 
-  .updates h1 {
+  /**Change update text sizes*/
+  #updates h1 {
     font-size: clamp(2rem, 6vmax, 3rem);
   }
 
@@ -382,25 +407,27 @@ nav > .nav-links {
 
   /**Houses*/
   /*#region*/
-  .houses {
+  /**Full size houses article*/
+  #houses {
     height: 100vh;
     margin-top: auto;
   }
 
-  .houses p {
+  /**Change houses text sizes*/
+  #houses p {
     font-size: clamp(0.7rem, 1.5vmax, 1.2rem);
     padding: 0 5%;
   }
 
-  .houses .name {
+  #houses .name {
     font-size: clamp(1.5rem, 3vmax, 2.2rem);
   }
 
-  .houses .points {
+  #houses .points {
     font-size: clamp(1.2rem, 2vmax, 1.5rem);
   }
 
-  .houses a {
+  #houses a {
     font-size: clamp(1.2rem, 2vmax, 1.5rem);
   }
   /*#endregion*/

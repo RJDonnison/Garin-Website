@@ -1,6 +1,6 @@
 import os
 
-folderPath = r'D:/Websites/School/schoolwebsite/images/backgrounds/'
+folderPath = r'../backgrounds/'
 
 fileSequence = 1
 

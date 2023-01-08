@@ -9,7 +9,7 @@ function onLoad() {
 
 function generateBackground() {
   var num = Math.ceil(Math.random() * totalCount);
-  var content = document.getElementById("content");
+  var content = document.querySelector("main");
   content.style.backgroundImage = "url('images/backgrounds/" + num + ".jpg')";
 }
 
