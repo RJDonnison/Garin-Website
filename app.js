@@ -1,23 +1,31 @@
 //*Total background images
 var totalCount = 4;
 
+//*Call functions on load
 function onLoad() {
   generateBackground();
   getDate();
   getWeek();
 }
 
+//*Select background for main content
 function generateBackground() {
+  //*Select random number in range 0 to totalCount
   var num = Math.ceil(Math.random() * totalCount);
+  //*Get content
   var content = document.querySelector("main");
+  //*Set background
   content.style.backgroundImage = "url('images/backgrounds/" + num + ".jpg')";
 }
 
 //*Nav dates
 //#region
+//*Get current date in long form
 function getDate() {
+  //*Get date
   const d = new Date();
 
+  //*Data setup
   const months = [
     "January",
     "February",
@@ -42,6 +50,7 @@ function getDate() {
     "Saturday",
   ];
 
+  //*Set date in long form in html
   document.getElementById("date").innerHTML =
     d.getDate() + " " + months[d.getMonth()] + ", " + days[d.getDay()];
 }
@@ -72,18 +81,23 @@ function getWeek() {
     Week = "A";
   }
 
+  //*Set week in html
   document.getElementById("week").innerHTML = "Week " + Week;
 }
 //#endregion
 
 //*Dropdowns
 //#region
+//*Get dropdowns
 const dropdowns = Array.from(document.querySelectorAll(".dropdown .header"));
+//*Add click event listener
 dropdowns.forEach((element) => {
   element.addEventListener("click", () => {
+    //*Set all dropdowns to be inactive
     dropdowns.forEach((e) => {
       if (element != e) e.parentElement.dataset.status = "inactive";
     });
+    //*Set clicked dropdown to be active if not active
     if (element.parentElement.dataset.status != "active") {
       element.parentElement.dataset.status = "active";
     } else {
