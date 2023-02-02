@@ -395,7 +395,7 @@ main {
     width: var(--side-width);
     height: 100vh;
     border-radius: 0;
-    background-image: url("images/garin.gif");
+    background-image: url("images/garin.jpg");
     background-position: center;
     background-size: cover;
     box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.5);
